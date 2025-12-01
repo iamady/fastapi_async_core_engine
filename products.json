@@ -1,0 +1,239 @@
+[
+  {
+    "name": "Classic Heritage Denim Jacket",
+    "category": "Clothing",
+    "price": 2499.99,
+    "description": "A rugged denim jacket with vintage fade, reinforced stitching and two front pockets — ideal for casual wear or layering over hoodies."
+  },
+  {
+    "name": "Urban Stretch Slim Fit Chinos",
+    "category": "Clothing",
+    "price": 1599.50,
+    "description": "Comfortable slim-fit chinos made from stretch cotton blend. Great for everyday wear or semi-formal outings. Lightweight and breathable for year-round use."
+  },
+  {
+    "name": "Women’s Boho Summer Maxi Dress",
+    "category": "Clothing",
+    "price": 1899.00,
+    "description": "Flowy maxi dress with floral print and adjustable straps — perfect for summer outings or beach vacations. Soft cotton fabric that drapes gently."
+  },
+  {
+    "name": "Premium Merino Wool V-Neck Sweater",
+    "category": "Clothing",
+    "price": 2999.75,
+    "description": "Luxurious merino wool sweater that provides warmth without bulk. Ideal for winter layering or smart-casual office wear."
+  },
+  {
+    "name": "Classic Leather Belt (Brown)",
+    "category": "Clothing",
+    "price": 799.99,
+    "description": "Genuine leather belt with brushed metal buckle. Durable and timeless — pairs well with jeans or formal trousers."
+  },
+  {
+    "name": "Unisex Cotton Crew-Neck T-Shirt (Pack of 2)",
+    "category": "Clothing",
+    "price": 899.20,
+    "description": "Soft cotton crew-neck T-shirts in neutral colors. Comfortable for daily wear, easy to wash and durable."
+  },
+  {
+    "name": "Men’s Waterproof Windbreaker Jacket",
+    "category": "Clothing",
+    "price": 2199.49,
+    "description": "Lightweight windbreaker with water-resistant coating and hood. Great for rainy seasons, travel or outdoor activities."
+  },
+  {
+    "name": "Women’s Classic Fit Denim Jeans",
+    "category": "Clothing",
+    "price": 1699.95,
+    "description": "Straight-leg denim jeans with mid-rise waist, pre-washed for softness and comfort. Durable stitching, suitable for everyday wear."
+  },
+  {
+    "name": "Athletic Running Shorts (Unisex)",
+    "category": "Clothing",
+    "price": 1099.00,
+    "description": "Breathable polyester-spandex blend shorts with elastic waistband and side pockets. Great for workouts or casual summer wear."
+  },
+  {
+    "name": "Classic Polo Shirt (Men)",
+    "category": "Clothing",
+    "price": 1199.79,
+    "description": "Cotton-pique polo shirt with ribbed collar and cuffed sleeves. Versatile casual shirt — can be worn with jeans or chinos."
+  },
+
+  {
+    "name": "AlphaSound Wireless ANC Earbuds",
+    "category": "Electronics",
+    "price": 2599.99,
+    "description": "Compact true-wireless earbuds with active noise cancellation, 30 h battery life (with case), IPX5 water resistance and modern Bluetooth 5.3 connectivity. Ideal for daily commutes and music lovers."
+  },
+  {
+    "name": "ZenBook 14\" Ultra-Slim Laptop",
+    "category": "Electronics",
+    "price": 75499.50,
+    "description": "Lightweight 14-inch laptop with 16 GB RAM, 512 GB SSD and high-resolution display — perfect for developers, students or professionals demanding portability and power."
+  },
+  {
+    "name": "4K Smart LED TV 55\"",
+    "category": "Electronics",
+    "price": 45999.00,
+    "description": "Slim-bezel 55-inch 4K Smart LED TV with HDR, built-in streaming apps and multiple HDMI ports. Great for home theatre, binge-watching or gaming setup."
+  },
+  {
+    "name": "Bluetooth Fitness Smartwatch",
+    "category": "Electronics",
+    "price": 3499.90,
+    "description": "Water-resistant fitness smartwatch with heart-rate monitor, sleep tracking, notifications and up to 7 days battery. Suitable for everyday health tracking and workouts."
+  },
+  {
+    "name": "Portable Power Bank 20,000 mAh",
+    "category": "Electronics",
+    "price": 1299.95,
+    "description": "High-capacity lithium-ion power bank with dual USB-C & USB-A output, quick-charge support and compact form — ideal for travel and charging on the go."
+  },
+  {
+    "name": "Wireless Ergonomic Keyboard & Mouse Combo",
+    "category": "Electronics",
+    "price": 2499.49,
+    "description": "Slim wireless keyboard with silent keys and ergonomic mouse. Long battery life and plug-and-play setup — good for home office or programming work."
+  },
+  {
+    "name": "Noise-Cancelling Over-Ear Headphones",
+    "category": "Electronics",
+    "price": 5999.99,
+    "description": "Over-ear headphones with deep bass, active noise cancellation and comfortable cushioning. Excellent for music, video calls or long coding sessions."
+  },
+  {
+    "name": "USB-C 65W Fast Charger Adapter",
+    "category": "Electronics",
+    "price": 1499.99,
+    "description": "Compact 65 W USB-C charger supporting laptops, tablets and phones. Provides quick charge for devices while traveling or working remotely."
+  },
+  {
+    "name": "1080p Webcam with Microphone",
+    "category": "Electronics",
+    "price": 1799.00,
+    "description": "Plug-and-play 1080p webcam ideal for video calls, remote meetings or online classes. Built-in microphone, adjustable clip and USB connection."
+  },
+  {
+    "name": "Smart Wi-Fi LED Bulb (Set of 2)",
+    "category": "Electronics",
+    "price": 899.95,
+    "description": "Energy-efficient Wi-Fi enabled LED bulbs with adjustable brightness and color temperature. Perfect for smart-home lighting setups."
+  },
+
+  {
+    "name": "The Quantum Architect (Hardcover)",
+    "category": "Books",
+    "price": 799.50,
+    "description": "A gripping science-fiction novel exploring futuristic AI societies, power dynamics and human identity — ideal for fans of thought-provoking speculative fiction."
+  },
+  {
+    "name": "Mastering SQLAlchemy & Async Python",
+    "category": "Books",
+    "price": 1499.00,
+    "description": "Comprehensive technical guide covering asynchronous programming in Python, SQLAlchemy ORM patterns, best practices and real-world examples — useful for backend developers and engineers."
+  },
+  {
+    "name": "Culinary Art: Easy Recipes for Home Chefs",
+    "category": "Books",
+    "price": 599.99,
+    "description": "Beautifully illustrated cookbook with over 100 easy-to-follow recipes for everyday home cooking — from starters to desserts. Great for beginners and culinary enthusiasts alike."
+  },
+  {
+    "name": "Mindfulness & Minimalist Living",
+    "category": "Books",
+    "price": 699.20,
+    "description": "Non-fiction lifestyle book offering practical tips on simplifying life, mindfulness, and creating a peaceful home environment. Inspiring read for self-improvement seekers."
+  },
+  {
+    "name": "History of Ancient Civilizations (Vol. I)",
+    "category": "Books",
+    "price": 899.99,
+    "description": "Detailed historical account of ancient empires and civilizations, covering geography, culture and political systems. Informative and well-researched reference work."
+  },
+  {
+    "name": "Deep Learning Essentials: From Scratch to Production",
+    "category": "Books",
+    "price": 2499.50,
+    "description": "Technical book covering deep learning fundamentals, neural networks, production-ready model deployment, and hands-on Python code examples."
+  },
+  {
+    "name": "Children’s Illustrated Fairy Tales",
+    "category": "Books",
+    "price": 499.00,
+    "description": "Beautifully illustrated collection of classic fairy tales for children — ideal as bedtime stories or gifts for young readers."
+  },
+  {
+    "name": "Travel Diaries: Tales from the Road",
+    "category": "Books",
+    "price": 549.75,
+    "description": "Memoir-style collection of travel stories from around the world, capturing cultures, adventures and human connections. A breezy, inspiring read for wanderlust souls."
+  },
+  {
+    "name": "Modern Interior Design Ideas",
+    "category": "Books",
+    "price": 1299.00,
+    "description": "Coffee-table style book showcasing modern interior design, home décor inspiration and practical tips for organizing your living space beautifully."
+  },
+  {
+    "name": "Beginner’s Guide to Gardening & Home Plants",
+    "category": "Books",
+    "price": 699.95,
+    "description": "Practical guide for first-time home gardeners — includes plant care, indoor gardening tips and easy-to-grow plant suggestions for apartments or houses."
+  },
+
+  {
+    "name": "Cotton King Size Bed Sheet Set (4 pcs)",
+    "category": "Home",
+    "price": 2999.99,
+    "description": "Soft, breathable 100% cotton bed-sheet set with pillow covers — brings comfort and elegance to your bedroom. Machine-washable and fade-resistant."
+  },
+  {
+    "name": "Modern Wall-Mount Bookshelf (5-tier)",
+    "category": "Home",
+    "price": 5499.49,
+    "description": "Space-saving 5-tier wall-mounted bookshelf made of engineered wood — perfect for small apartments. Easy to install and ideal for books, décor or storage."
+  },
+  {
+    "name": "LED Desk Lamp with Adjustable Arm",
+    "category": "Home",
+    "price": 1499.90,
+    "description": "Energy-efficient LED desk lamp with adjustable brightness and flexible arm — great for study, work or reading spaces."
+  },
+  {
+    "name": "Non-stick 5-Piece Cookware Set",
+    "category": "Home",
+    "price": 3999.99,
+    "description": "Durable non-stick cookware set with frying pan, sauce pan and cooking pot — ideal for everyday home cooking. Easy to clean and scratch-resistant."
+  },
+  {
+    "name": "Microfiber Bathroom Towel Set (6 pcs)",
+    "category": "Home",
+    "price": 1099.75,
+    "description": "Soft and highly absorbent microfiber towels — quick-drying and easy to maintain. Suitable for bathroom or gym use."
+  },
+  {
+    "name": "Digital Kitchen Scale – 5 kg capacity",
+    "category": "Home",
+    "price": 899.99,
+    "description": "Compact digital kitchen scale with tare function — ideal for cooking, baking or portion control. Precise and battery-powered."
+  },
+  {
+    "name": "Memory Foam Lumbar Support Cushion",
+    "category": "Home",
+    "price": 1299.80,
+    "description": "Ergonomic lumbar support cushion for chairs or sofas — improves posture and provides back comfort during long hours of sitting."
+  },
+  {
+    "name": "Cotton Canvas Storage Box (Set of 3)",
+    "category": "Home",
+    "price": 799.99,
+    "description": "Foldable canvas storage boxes — perfect for organizing clothes, toys or household items. Space-saving and easy to store."
+  },
+  {
+    "name": "Aroma Scented Candle (Pack of 3)",
+    "category": "Home",
+    "price": 599.50,
+    "description": "Long-lasting scented candles with subtle fragrance — ideal for creating a cozy ambiance in living rooms or bedrooms."
+  }
+]
