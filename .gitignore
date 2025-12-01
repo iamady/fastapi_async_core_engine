@@ -88,7 +88,7 @@ yarn-error.log
 # Recommendation Engine Artifacts
 # ------------------------------
 # Models, embeddings, ML assets
-models/
+#models/
 checkpoints/
 artifacts/
 embeddings/
