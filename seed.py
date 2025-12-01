@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Seed script for Customer Orders & Recommendation Engine (CORE)
-Generates sample data using Faker: 10 customers, 20 products, 5 orders per customer
+Generates sample data using products.json: 10 customers, products from JSON, 5 orders per customer
 
 Usage:
     python seed.py                    # Normal seeding (keeps existing data)
@@ -12,6 +12,7 @@ Usage:
 import asyncio
 import random
 import sys
+import json
 from datetime import datetime, timedelta
 from decimal import Decimal
 from typing import Optional
@@ -58,23 +59,25 @@ class DataSeeder:
         print(f"✓ Created {len(customers)} customers")
         return customers
     
-    async def create_products(self, db: AsyncSession, count: int = 20) -> list[Product]:
-        """Create sample products"""
-        print(f"Creating {count} products...")
+    async def create_products(self, db: AsyncSession) -> list[Product]:
+        """Create sample products from products.json"""
+        print("Creating products from products.json...")
         
-        categories = [
-            "Clothing"
-            #"Electronics", "Books", "Clothing", "Home", "Sports", 
-            #"Beauty", "Toys", "Grocery", "Automotive", "Health"
-        ]
+        # Load products from JSON file
+        try:
+            with open('products.json', 'r', encoding='utf-8') as f:
+                products_data = json.load(f)
+        except FileNotFoundError:
+            print("❌ products.json not found, using fallback data")
+            products_data = self._get_fallback_products()
         
         products = []
-        for i in range(count):
+        for product_data in products_data:
             product = Product(
-                name=self.faker.catch_phrase(),
-                category=random.choice(categories),
-                price=round(Decimal(self.faker.random_number(digits=3, fix_len=False) / 10), 2),
-                description=self.faker.text(max_nb_chars=200)
+                name=product_data['name'],
+                category=product_data['category'],
+                price=Decimal(str(product_data['price'])),
+                description=product_data['description']
             )
             products.append(product)
         
@@ -85,8 +88,37 @@ class DataSeeder:
         for product in products:
             await db.refresh(product)
         
-        print(f"✓ Created {len(products)} products")
+        print(f"✓ Created {len(products)} products from products.json")
         return products
+    
+    def _get_fallback_products(self):
+        """Fallback product data if products.json is not available"""
+        return [
+            {
+                "name": "Classic Denim Jacket",
+                "category": "Clothing",
+                "price": 2499.99,
+                "description": "Timeless denim jacket perfect for casual wear"
+            },
+            {
+                "name": "Wireless Earbuds",
+                "category": "Electronics",
+                "price": 2599.99,
+                "description": "Premium wireless earbuds with noise cancellation"
+            },
+            {
+                "name": "Python Programming Guide",
+                "category": "Books",
+                "price": 1499.00,
+                "description": "Comprehensive guide to Python programming"
+            },
+            {
+                "name": "Cotton Bed Sheet Set",
+                "category": "Home",
+                "price": 2999.99,
+                "description": "Soft cotton bed sheet set for comfortable sleep"
+            }
+        ]
     
     async def create_orders(self, db: AsyncSession, customers: list[Customer], products: list[Product], orders_per_customer: int = 5) -> list[Order]:
         """Create sample orders for each customer"""
@@ -189,7 +221,7 @@ class DataSeeder:
                 customers = await self.create_customers(db, 10)
                 
                 # Create products
-                products = await self.create_products(db, 20)
+                products = await self.create_products(db)
                 
                 # Create orders
                 orders = await self.create_orders(db, customers, products, 5)
