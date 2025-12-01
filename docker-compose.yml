@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # FastAPI Application
+  core-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV_FILE_PATH=/app/.env
+    volumes:
+      - ./data:/app/data  # For SQLite database persistence
+      - ./logs:/app/logs  # For log persistence
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on:
+      core-app:
+        condition: service_healthy
+
+  # Optional: Redis for caching (if needed in future)
+  # redis:
+  #   image: redis:7-alpine
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   restart: unless-stopped
+
+volumes:
+  # redis_data:
