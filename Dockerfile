@@ -2,7 +2,7 @@
 # Multi-stage build for optimized production image
 
 # Stage 1: Build stage
-FROM python:3.10-slim as builder
+FROM python:3.10-slim AS builder
 
 # Set build arguments
 ARG PYTHONUNBUFFERED=1
@@ -49,6 +49,9 @@ COPY --from=builder /opt/venv /opt/venv
 # Set PATH to use virtual environment
 ENV PATH="/opt/venv/bin:$PATH"
 
+# Set Python path to include the app directory
+ENV PYTHONPATH="/app"
+
 # Create app user for security
 RUN groupadd -r appuser && useradd -r -g appuser appuser
 
@@ -58,6 +61,12 @@ WORKDIR /app
 # Copy application code
 COPY . .
 
+# Make entrypoint script executable
+RUN chmod +x docker-entrypoint.sh
+
+# Install the app as a Python package (editable install)
+RUN pip install -e .
+
 # Create necessary directories
 RUN mkdir -p /app/logs && \
     chown -R appuser:appuser /app
@@ -65,8 +74,8 @@ RUN mkdir -p /app/logs && \
 # Switch to non-root user
 USER appuser
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+# Health check with longer timeout for database initialization
+HEALTHCHECK --interval=30s --timeout=30s --start-period=60s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
 # Expose port
@@ -75,5 +84,8 @@ EXPOSE 8000
 # Set environment file location
 ENV ENV_FILE_PATH=/app/.env
 
-# Entrypoint command
+# Entrypoint script
+ENTRYPOINT ["./docker-entrypoint.sh"]
+
+# Default command
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
