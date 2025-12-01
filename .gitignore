@@ -1,0 +1,113 @@
+# ------------------------------
+# Python / General
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyd
+*.pyo
+*.pyd
+*.pdb
+
+# ------------------------------
+# FastAPI / Uvicorn
+# ------------------------------
+# Uvicorn reload files
+*.reload
+*.uds
+
+# ------------------------------
+# Environments
+# ------------------------------
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+ENV/
+env/
+
+# ------------------------------
+# Editor / IDE
+# ------------------------------
+.vscode/
+.idea/
+*.iml
+
+# ------------------------------
+# MyPy / Ruff / Pytest
+# ------------------------------
+.mypy_cache/
+.mypy_cache/*
+.pytest_cache/
+.pytest_cache/*
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ------------------------------
+# Databases / Cache
+# ------------------------------
+*.db
+*.sqlite
+*.sqlite3
+# alembic migrations cache
+alembic.ini
+alembic/versions/*.pyc
+
+# If you generate migration scripts manually:
+alembic/versions/*.py
+
+# ------------------------------
+# Logs
+# ------------------------------
+*.log
+logs/
+**/logs/
+
+# ------------------------------
+# Node (if using frontend or docs UI)
+# ------------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ------------------------------
+# Recommendation Engine Artifacts
+# ------------------------------
+# Models, embeddings, ML assets
+models/
+checkpoints/
+artifacts/
+embeddings/
+*.npy
+*.npz
+*.pt
+*.pkl
+*.model
+
+# ------------------------------
+# Cline / AI Agents
+# ------------------------------
+.cline/
+.openai/
+**/.history
+
+# ------------------------------
+# OS / Misc
+# ------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
