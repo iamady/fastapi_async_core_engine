@@ -232,6 +232,32 @@ tail -f logs/app.log
 - [ ] Configure firewall and security groups
 - [ ] Set up CI/CD pipeline
 
+## 🏗️ What’s Missing / Future Enhancements
+
+🔐 Authentication & Authorization (OAuth2 / JWT / Auth flow)
+
+Add OAuth2 (or JWT-based) user authentication / authorization — e.g. login/signup endpoints, password hashing, token issuance (access + refresh tokens) and protected routes. This would secure customer data and API endpoints before exposing publicly.
+
+Optionally support third-party identity providers (SSO / social login / OAuth2-PKCE) for enterprise adoption.
+
+Role-based access control / permission levels (admin, user, etc.) for different operations (e.g. who can create products, view orders, manage recommendations).
+
+🧩 Database Migrations & Versioning (via Alembic)
+
+Integrate Alembic for database schema migrations: so that as models evolve (new tables/columns, modifications), versioned migrations keep schema in sync without manual database resets. 
+
+Maintain migration history (upgrade/downgrade), descriptive migration filenames, and include tests / CI checks to run migrations on staging before production. 
+
+Use a robust database for production (e.g. PostgreSQL or MySQL) instead of SQLite, to accommodate concurrency, scaling, data integrity, backups.
+
+🔎 Observability & Monitoring (via OpenTelemetry + logging/metrics)
+
+Instrument application for distributed tracing, metrics and logging: trace API requests, measure latency, monitor database queries, watch for errors. Libraries & patterns for this are already available. 
+
+Expose metrics (e.g. Prometheus format), log to structured log files / a logging backend, and optionally integrate with log aggregation, alerting, dashboards. 
+
+Add health-checks, circuit breakers / rate limiting / request-id / correlation-id middlewares to make the service resilient and observable under load.
+
 ## 🤝 Contributing
 
 1. Fork the repository
